@@ -2,8 +2,12 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <div>this is header</div>
+    <div className="header--container">
+      <div id="logo">sudoCode</div>
+      <div id="search-bar">
+        <input type="text" />
+      </div>
+      <div>theme-toggle</div>
     </div>
   );
 };
