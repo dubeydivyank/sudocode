@@ -1,4 +1,9 @@
 import "./SideBar.css";
+import home from "../../svg/home.svg";
+import playlist from "../../svg/playlist.svg";
+import liked from "../../svg/liked.svg";
+import watchLater from "../../svg/watch-later.svg";
+import history from "../../svg/history.svg";
 
 const SideBar = ({ tabIndex, tabChangeHandler }) => {
   return (
@@ -9,6 +14,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
           tabChangeHandler(1);
         }}
       >
+        <img src={home} alt="home-icon" />
         Home
       </div>
       <div
@@ -17,6 +23,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
           tabChangeHandler(2);
         }}
       >
+        <img src={playlist} alt="playlist-icon" />
         Playlists
       </div>
       <div
@@ -25,6 +32,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
           tabChangeHandler(3);
         }}
       >
+        <img src={liked} alt="liked-icon" />
         Liked
       </div>
       <div
@@ -33,6 +41,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
           tabChangeHandler(4);
         }}
       >
+        <img src={watchLater} alt="watchlater-icon" />
         Watch Later
       </div>
       <div
@@ -41,6 +50,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
           tabChangeHandler(5);
         }}
       >
+        <img src={history} alt="history-icon" />
         History
       </div>
     </div>

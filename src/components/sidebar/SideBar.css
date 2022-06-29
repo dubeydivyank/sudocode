@@ -9,18 +9,22 @@
   align-items: center;
 }
 
+.sidebar--container img {
+  padding: 0px 1rem 2px 1rem;
+}
 .tab {
   width: 80%;
   height: 2.6rem;
   padding: 0.2rem;
-  /* background-color: red; */
   display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 8px;
   cursor: pointer;
+  color: #444444;
+  font-weight: 700;
 }
 
 .active-tab {
   background-color: rgb(187, 192, 192);
+  color: #000;
 }
