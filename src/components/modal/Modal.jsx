@@ -8,7 +8,13 @@ const Modal = () => {
   const [loginPage, setLoginPage] = useState(true);
   return (
     <div className="modal-container">
-      <div className="modal">{loginPage ? <Login /> : <SignUp />}</div>
+      <div className="modal">
+        {loginPage ? (
+          <Login setLoginPage={setLoginPage} />
+        ) : (
+          <SignUp setLoginPage={setLoginPage} />
+        )}
+      </div>
     </div>
   );
 };
