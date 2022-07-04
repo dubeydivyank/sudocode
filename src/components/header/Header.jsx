@@ -1,23 +1,35 @@
 import "./Header.css";
-import moon from "../../svg/moon.svg";
+import { useState } from "react";
+// import moon from "../../svg/moon.svg";
+// import sun from "../../svg/sun.svg";
+import logout from "../../svg/logout.svg";
 import user from "../../svg/user.svg";
+import Modal from "../modal/Modal";
 
 const Header = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+
+  const modalHandler = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <div className="header--container">
       <div id="logo">sudoCode</div>
       <div id="search-bar">
-        <input type="text" />
+        <input type="text" placeholder="search" />
       </div>
       <div className="header--buttons">
-        <span className="theme-toggle">
-          {/* theme */}
-          <img src={moon} alt="theme-switch" />
-        </span>
-        <span className="login-signup">
-          <img src={user} alt="user-icon" />
+        <span id="login-logout">
+          {userLoggedIn ? (
+            <img src={logout} alt="user-icon" />
+          ) : (
+            <img src={user} alt="user-icon" onClick={modalHandler} />
+          )}
         </span>
       </div>
+      {modalOpen && <Modal />}
     </div>
   );
 };

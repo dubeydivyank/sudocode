@@ -5,8 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(68, 68, 68);
+  color: hwb(0 27% 73%);
   background-color: rgb(226, 226, 226);
+  z-index: 1;
 }
 
 #logo {
@@ -15,6 +16,21 @@
   padding-left: 3rem;
 }
 
-.header--buttons {
-  padding-right: 3rem;
+#theme-toggle img {
+  height: 2rem;
+  cursor: pointer;
+}
+
+#login-logout img {
+  height: 2rem;
+  margin: 0 3rem 0 1.8rem;
+  cursor: pointer;
+}
+
+#search-bar input {
+  height: 1.8rem;
+  width: 30vw;
+  background-color: rgb(187, 192, 192);
+  border: none;
+  border-radius: 6px;
 }
