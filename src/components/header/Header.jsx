@@ -5,7 +5,8 @@ import { useState } from "react";
 import logout from "../../svg/logout.svg";
 import user from "../../svg/user.svg";
 import Modal from "../modal/Modal";
-
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -14,6 +15,9 @@ const Header = () => {
     setModalOpen(!modalOpen);
   };
 
+  const logoutHandler = () => {
+    signOut(auth);
+  };
   return (
     <div className="header--container">
       <div id="logo">sudoCode</div>
@@ -30,6 +34,7 @@ const Header = () => {
         </span>
       </div>
       {modalOpen && <Modal />}
+      <button onClick={logoutHandler}>Logout</button>
     </div>
   );
 };
