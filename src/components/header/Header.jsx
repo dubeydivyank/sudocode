@@ -1,23 +1,17 @@
 import "./Header.css";
 import { useState } from "react";
-// import moon from "../../svg/moon.svg";
-// import sun from "../../svg/sun.svg";
-import logout from "../../svg/logout.svg";
-import user from "../../svg/user.svg";
+import login from "../../svg/login.svg";
+import userIcon from "../../svg/user.svg";
 import Modal from "../modal/Modal";
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
-const Header = () => {
+
+const Header = ({ user }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
 
   const modalHandler = () => {
     setModalOpen(!modalOpen);
   };
 
-  const logoutHandler = () => {
-    signOut(auth);
-  };
   return (
     <div className="header--container">
       <div id="logo">sudoCode</div>
@@ -26,15 +20,14 @@ const Header = () => {
       </div>
       <div className="header--buttons">
         <span id="login-logout">
-          {userLoggedIn ? (
-            <img src={logout} alt="user-icon" />
+          {user ? (
+            <img src={userIcon} alt="user" onClick={modalHandler} />
           ) : (
-            <img src={user} alt="user-icon" onClick={modalHandler} />
+            <img src={login} alt="login" onClick={modalHandler} />
           )}
         </span>
       </div>
-      {modalOpen && <Modal />}
-      <button onClick={logoutHandler}>Logout</button>
+      {modalOpen && <Modal user={user} setModalOpen={setModalOpen} />}
     </div>
   );
 };

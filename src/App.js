@@ -18,10 +18,10 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(currentUser);
     });
     return () => {
       unsubscribe();
+      console.log(user);
     };
   }, []);
 
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header user={user} />
       <SideBar tabIndex={tabIndex} tabChangeHandler={tabChangeHandler} />
       {/* <ReactPlayer
         url="https://www.youtube.com/watch?v=1004gyjLhkA"

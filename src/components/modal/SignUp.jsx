@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import "./SignUp.css";
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import close from "../../svg/close.svg";
+import googlelogo from "../../svg/google-logo.png";
 
-const SignUp = ({ setLoginPage }) => {
+const SignUp = ({ setLoginPage, setModalOpen }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -21,32 +23,54 @@ const SignUp = ({ setLoginPage }) => {
   };
 
   return (
-    <div className="signup-form-container">
+    <div className="form-container">
+      <img
+        src={close}
+        alt="close-modal"
+        id="close-modal"
+        onClick={() => {
+          setModalOpen(false);
+        }}
+      />
+
+      <h1 className="modal-heading">Sign Up</h1>
+
       <input
+        className="input-field"
         type="email"
         placeholder="Email Address"
         onChange={(e) => {
           setEmail(e.target.value);
         }}
       />
+
       <input
+        className="input-field"
         type="password"
         placeholder="Password"
         onChange={(e) => {
           setPassword(e.target.value);
         }}
       />
-      <button type="submit" onClick={signUpHandler}>
-        Sign Up
+
+      <button type="submit" onClick={signUpHandler} id="login-btn">
+        Sign up
       </button>
+
+      <div id="signin-google">
+        <img src={googlelogo} />
+        Continue with Google
+      </div>
+
       <div
-        style={{ cursor: "pointer" }}
+        className="redirect-modal"
         onClick={() => {
           setLoginPage(true);
         }}
       >
-        Click here to Login
+        Already have an account ?
       </div>
+
       {error && <div>{error}</div>}
     </div>
   );
