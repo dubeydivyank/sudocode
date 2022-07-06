@@ -1,12 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./SignUp.css";
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import close from "../../svg/close.svg";
 import googlelogo from "../../svg/google-logo.png";
 
-const SignUp = ({ setLoginPage, setModalOpen }) => {
+const SignUp = ({ setLoginPage, setModalOpen, googleSignIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,7 +16,9 @@ const SignUp = ({ setLoginPage, setModalOpen }) => {
     console.log("clicked");
     setError("");
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password).then(
+        setModalOpen(false)
+      );
     } catch (error) {
       setError(error.message);
     }
@@ -57,8 +59,8 @@ const SignUp = ({ setLoginPage, setModalOpen }) => {
         Sign up
       </button>
 
-      <div id="signin-google">
-        <img src={googlelogo} />
+      <div id="signin-google" onClick={googleSignIn}>
+        <img src={googlelogo} alt="" />
         Continue with Google
       </div>
 

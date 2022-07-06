@@ -5,6 +5,8 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 import close from "../../svg/close.svg";
 
 const Modal = ({ user, setModalOpen }) => {
@@ -12,6 +14,12 @@ const Modal = ({ user, setModalOpen }) => {
 
   const logoutHandler = () => {
     signOut(auth);
+    setModalOpen(false);
+  };
+
+  const googleSignIn = () => {
+    const googleAuthProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleAuthProvider);
   };
 
   if (user) {
@@ -39,9 +47,17 @@ const Modal = ({ user, setModalOpen }) => {
     <div className="modal-container">
       <div className="modal">
         {loginPage ? (
-          <Login setLoginPage={setLoginPage} setModalOpen={setModalOpen} />
+          <Login
+            setLoginPage={setLoginPage}
+            setModalOpen={setModalOpen}
+            googleSignIn={googleSignIn}
+          />
         ) : (
-          <SignUp setLoginPage={setLoginPage} setModalOpen={setModalOpen} />
+          <SignUp
+            setLoginPage={setLoginPage}
+            setModalOpen={setModalOpen}
+            googleSignIn={googleSignIn}
+          />
         )}
       </div>
     </div>

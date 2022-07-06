@@ -1,0 +1,16 @@
+.cards-container {
+  display: grid;
+}
+
+.video-card {
+  height: 20rem;
+  width: 18rem;
+  margin: 2rem;
+  background-color: rgb(226, 226, 226);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import googlelogo from "../../svg/google-logo.png";
 
-const Login = ({ setLoginPage, setModalOpen }) => {
+const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,8 +15,11 @@ const Login = ({ setLoginPage, setModalOpen }) => {
     e.preventDefault();
     setError("");
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password).then(
+        setModalOpen(false)
+      );
     } catch (error) {
+      console.log(error);
       setError(error.message);
     }
   };
@@ -33,6 +36,8 @@ const Login = ({ setLoginPage, setModalOpen }) => {
       />
 
       <h1 className="modal-heading">Login</h1>
+
+      {error && <div className="error-alert">{error}</div>}
 
       <input
         className="input-field"
@@ -56,8 +61,8 @@ const Login = ({ setLoginPage, setModalOpen }) => {
         Login
       </button>
 
-      <div id="signin-google">
-        <img src={googlelogo} />
+      <div id="signin-google" onClick={googleSignIn}>
+        <img src={googlelogo} alt="" />
         Continue with Google
       </div>
 
@@ -69,8 +74,6 @@ const Login = ({ setLoginPage, setModalOpen }) => {
       >
         Don't have an Account ?
       </div>
-
-      {error && <div>{error}</div>}
     </div>
   );
 };

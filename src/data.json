@@ -1,0 +1,260 @@
+{
+  "videos": [
+    {
+      "id": "1",
+      "title": "Introduction to System Design | Part 1",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=FSR1s2b-l_I",
+      "date-added": "Aug 21, 2020",
+      "thumbnail": "FSR1s2b-l_I"
+    },
+    {
+      "id": "2",
+      "title": "Components of System Design | Part 2",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=aSvOThsVe5w",
+      "date-added": "Sep 7, 2020",
+      "thumbnail": "aSvOThsVe5w"
+    },
+    {
+      "id": "3",
+      "title": "Client Server Architecture | Part 3",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=Dg1U-jwVUrg",
+      "date-added": "Sep 14, 2020",
+      "thumbnail": "Dg1U-jwVUrg"
+    },
+    {
+      "id": "4",
+      "title": "Proxies | Part 4",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=Nu-4Q3OoR4E",
+      "date-added": "Sep 21, 2020",
+      "thumbnail": "Nu-4Q3OoR4E"
+    },
+    {
+      "id": "5",
+      "title": "Data & Data Flow | Part 5",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=YBRGp_CNzXw",
+      "date-added": "Sep 28, 2020",
+      "thumbnail": "YBRGp_CNzXw"
+    },
+    {
+      "id": "6",
+      "title": "Databases types: SQL, NoSQL, Column, Search, Key Value | Part 6",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=O_c7lzNbcKo",
+      "date-added": "Oct 5, 2020",
+      "thumbnail": "O_c7lzNbcKo"
+    },
+    {
+      "id": "7",
+      "title": "Anatomy of Applications and Services | Part 7",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=iuR7rzNvbxs",
+      "date-added": "Oct 12, 2020",
+      "thumbnail": "iuR7rzNvbxs"
+    },
+    {
+      "id": "8",
+      "title": "Application Programming Interface (API) | Part 8",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=dpcILJ8BTzU",
+      "date-added": "Oct 19, 2020",
+      "thumbnail": "dpcILJ8BTzU"
+    },
+    {
+      "id": "9",
+      "title": "Caching | Cache Patterns | Cache Invalidation & Eviction | Part 9",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=Ez1GK2imrsY",
+      "date-added": "Oct 26, 2020",
+      "thumbnail": "Ez1GK2imrsY"
+    },
+    {
+      "id": "10",
+      "title": "What is a REST API? | CRUD APIs| REST vs HTTP | Part 10",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=nUuAWn0AAiY",
+      "date-added": "Nov 2, 2020",
+      "thumbnail": "nUuAWn0AAiY"
+    },
+    {
+      "id": "11",
+      "title": "Message Queues | Producer Consumer Model | Part 11",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=J6CBdSCB_fY",
+      "date-added": "Nov 9, 2020",
+      "thumbnail": "J6CBdSCB_fY"
+    },
+    {
+      "id": "12",
+      "title": "Pub Sub Messaging | Publisher Subscriber(Part 1 of 2) | Part 12",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=EgJ7xts82Mg",
+      "date-added": "Nov 16, 2020",
+      "thumbnail": "EgJ7xts82Mg"
+    },
+    {
+      "id": "13",
+      "title": "Pub Sub Use Cases | Publisher Subscriber (Part 2 of 2) | Part 13",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=-vd_Ay0pvFY",
+      "date-added": "Nov 23, 2020",
+      "thumbnail": "-vd_Ay0pvFY"
+    },
+    {
+      "id": "14",
+      "title": "Performance Metrics | Part 14",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=HrfgslRY7Ak",
+      "date-added": "Nov 30, 2020",
+      "thumbnail": "HrfgslRY7Ak"
+    },
+    {
+      "id": "15",
+      "title": "Performance Metrics of components in a software | Part 15",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=R72h2D3Y76g",
+      "date-added": "Dec 7, 2020",
+      "thumbnail": "R72h2D3Y76g"
+    },
+    {
+      "id": "16",
+      "title": "How to build a resume that gets shortlisted in India and abroad?",
+      "playlist": "Misc",
+      "url": "https://www.youtube.com/watch?v=jZZzvxdXPNk",
+      "date-added": "Dec 14, 2020",
+      "thumbnail": "jZZzvxdXPNk"
+    },
+    {
+      "id": "17",
+      "title": "Resume tips (Part 2)| College students ask interview, resume and other career related queries",
+      "playlist": "Misc",
+      "url": "https://www.youtube.com/watch?v=p_r2WKG_3s0",
+      "date-added": "Dec 21, 2020",
+      "thumbnail": "p_r2WKG_3s0"
+    },
+    {
+      "id": "18",
+      "title": "Fault and Failure in distributed systems | Part 16",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=7vIzGmxdUvI",
+      "date-added": "Dec 28, 2020",
+      "thumbnail": "7vIzGmxdUvI"
+    },
+    {
+      "id": "19",
+      "title": "Scaling in a nutshell | Horizontal vs vertical scaling | Part 17",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=G1Z7w9_vspY",
+      "date-added": "Jan 4, 2021",
+      "thumbnail": "G1Z7w9_vspY"
+    },
+    {
+      "id": "20",
+      "title": "Database Replication | Synchronous vs Asynchronous | Part 18",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=RIcNswROzCc",
+      "date-added": "Jan 11, 2021",
+      "thumbnail": "RIcNswROzCc"
+    },
+    {
+      "id": "21",
+      "title": "CAP | Consistency, Availability and Partitioning | Part 19",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=pSoKUfLTe8Y",
+      "date-added": "Jan 18, 2021",
+      "thumbnail": "pSoKUfLTe8Y"
+    },
+    {
+      "id": "22",
+      "title": "What is CAP Theorem? Degrees of CAP theorem, use cases | Part 20",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=kwCFHLbIhak",
+      "date-added": "Jan 25, 2021",
+      "thumbnail": "kwCFHLbIhak"
+    },
+    {
+      "id": "23",
+      "title": "Books on System Design and System Design Interviews | System Architecture",
+      "playlist": "Misc",
+      "url": "https://www.youtube.com/watch?v=5dqvbDModlw",
+      "date-added": "Feb 8, 2021",
+      "thumbnail": "5dqvbDModlw"
+    },
+    {
+      "id": "24",
+      "title": "What is Database Sharding, Logical and Physical Shards, Dynamic vs Algorithmic Sharding",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=YCb-tDQWrXk",
+      "date-added": "Feb 15, 2021",
+      "thumbnail": "YCb-tDQWrXk"
+    },
+    {
+      "id": "25",
+      "title": "Key based Sharding | Shard Key | Hash function | Advantages and disadvantages",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=arUpleGFdt4",
+      "date-added": "Feb 23, 2021",
+      "thumbnail": "arUpleGFdt4"
+    },
+    {
+      "id": "26",
+      "title": "Range based sharding | Advantages and disadvantages | Hotspots | Use Cases",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=avepna2q9w0",
+      "date-added": "Mar 1, 2021",
+      "thumbnail": "avepna2q9w0"
+    },
+    {
+      "id": "27",
+      "title": "How can you excel at your first job as a software engineer? Pro tips ft Gaurav Sen",
+      "playlist": "Misc",
+      "url": "https://www.youtube.com/watch?v=ApC0166ALuU",
+      "date-added": "Mar 8, 2021",
+      "thumbnail": "ApC0166ALuU"
+    },
+    {
+      "id": "28",
+      "title": "Directory based sharding",
+      "playlist": "System Design Primer Course",
+      "url": "https://www.youtube.com/watch?v=62adurZ_Muw",
+      "date-added": "Mar 15, 2021",
+      "thumbnail": "62adurZ_Muw"
+    },
+    {
+      "id": "29",
+      "title": "",
+      "playlist": "",
+      "url": "https://www.youtube.com/watch?v=",
+      "date-added": "Jan 25, 2021",
+      "thumbnail": ""
+    },
+    {
+      "id": "30",
+      "title": "",
+      "playlist": "",
+      "url": "https://www.youtube.com/watch?v=",
+      "date-added": "Jan 25, 2021",
+      "thumbnail": ""
+    }
+  ],
+  "users": {
+    "ajnlfaiwefnlaksdlvmlaedf": {
+      "liked": [
+        {
+          "id": "1",
+          "video": {
+            "title": "Introduction to System Design | Part 1",
+            "playlist": "System Design Primer Course",
+            "url": "https://www.youtube.com/watch?v=FSR1s2b-l_I",
+            "date-added": "Aug 21, 2020",
+            "thumbnail": "FSR1s2b-l_I"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -15,13 +15,13 @@ function App() {
   const [tabIndex, setTabIndex] = useState(1);
 
   const [user, setUser] = useState("");
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
     return () => {
       unsubscribe();
-      console.log(user);
     };
   }, []);
 
