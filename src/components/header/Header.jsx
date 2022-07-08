@@ -3,6 +3,7 @@ import { useState } from "react";
 import login from "../../svg/login.svg";
 import userIcon from "../../svg/user.svg";
 import Modal from "../modal/Modal";
+import ReactDOM from "react-dom";
 
 const Header = ({ user }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,7 +28,12 @@ const Header = ({ user }) => {
           )}
         </span>
       </div>
-      {modalOpen && <Modal user={user} setModalOpen={setModalOpen} />}
+      {/* {modalOpen && <Modal user={user} setModalOpen={setModalOpen} />} */}
+      {modalOpen &&
+        ReactDOM.createPortal(
+          <Modal user={user} setModalOpen={setModalOpen} />,
+          document.getElementById("overlay-root")
+        )}
     </div>
   );
 };
