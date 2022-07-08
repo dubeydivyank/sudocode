@@ -15,9 +15,8 @@ const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
     e.preventDefault();
     setError("");
     try {
-      await signInWithEmailAndPassword(auth, email, password).then(
-        setModalOpen(false)
-      );
+      await signInWithEmailAndPassword(auth, email, password).then;
+      setModalOpen(false)();
     } catch (error) {
       console.log(error);
       setError(error.message);
@@ -38,29 +37,29 @@ const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
       <h1 className="modal-heading">Login</h1>
 
       {error && <div className="error-alert">{error}</div>}
+      <form onSubmit={loginHandler}>
+        <input
+          className="input-field"
+          type="email"
+          placeholder="Email Address"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
 
-      <input
-        className="input-field"
-        type="email"
-        placeholder="Email Address"
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
+        <input
+          className="input-field"
+          type="password"
+          placeholder="Password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
 
-      <input
-        className="input-field"
-        type="password"
-        placeholder="Password"
-        onChange={(e) => {
-          setPassword(e.target.value);
-        }}
-      />
-
-      <button type="submit" onClick={loginHandler} id="login-btn">
-        Login
-      </button>
-
+        <button type="submit" id="login-btn">
+          Login
+        </button>
+      </form>
       <div id="signin-google" onClick={googleSignIn}>
         <img src={googlelogo} alt="" />
         Continue with Google

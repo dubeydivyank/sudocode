@@ -33,10 +33,6 @@ function App() {
     <div className="App">
       <Header user={user} />
       <SideBar tabIndex={tabIndex} tabChangeHandler={tabChangeHandler} />
-      {/* <ReactPlayer
-        url="https://www.youtube.com/watch?v=1004gyjLhkA"
-        controls="true"
-      /> */}
       <div className="pages">
         {tabIndex === 1 && <Home />}
         {tabIndex === 2 && <PlayLists />}
