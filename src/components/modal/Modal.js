@@ -3,14 +3,10 @@ import { useState } from "react";
 import "./Modal.css";
 import Login from "./Login";
 import SignUp from "./SignUp";
-// import { signOut } from "firebase/auth";
-// import { auth } from "../../firebase";
-// import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuthContext } from "../../context/AuthContext";
 
 import close from "../../svg/close.svg";
 
-// const Modal = ({ user, setModalOpen }) => {
 const Modal = ({ setModalOpen }) => {
   const [loginPage, setLoginPage] = useState(true);
 
@@ -25,8 +21,6 @@ const Modal = ({ setModalOpen }) => {
   };
 
   const googleSignInHandler = async () => {
-    // const googleAuthProvider = new GoogleAuthProvider();
-    // return signInWithPopup(auth, googleAuthProvider);
     await googleSignIn();
   };
 
@@ -43,6 +37,7 @@ const Modal = ({ setModalOpen }) => {
             }}
           />
           <div id={"user-email"}>{user.email}</div>
+
           <button onClick={logoutHandler} id={"logout-btn"}>
             Log Out
           </button>

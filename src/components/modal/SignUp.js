@@ -1,8 +1,5 @@
 import React from "react";
 import { useState } from "react";
-// import "./SignUp.css";
-// import { auth } from "../../firebase";
-// import { createUserWithEmailAndPassword } from "firebase/auth";
 import close from "../../svg/close.svg";
 import googlelogo from "../../svg/google-logo.png";
 import { useAuthContext } from "../../context/AuthContext";
@@ -11,11 +8,11 @@ const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
   const { signUp } = useAuthContext();
 
   const signUpHandler = async (e) => {
     e.preventDefault();
-    console.log("signup clicked");
     setError("");
     try {
       await signUp(email, password);
@@ -39,6 +36,7 @@ const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
       <h1 className="modal-heading">Sign Up</h1>
 
       {error && <div className="error-alert">{error}</div>}
+
       <form onSubmit={signUpHandler}>
         <input
           className="input-field"
@@ -48,7 +46,6 @@ const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
             setEmail(e.target.value);
           }}
         />
-
         <input
           className="input-field"
           type="password"
@@ -57,11 +54,11 @@ const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
             setPassword(e.target.value);
           }}
         />
-
         <button type="submit" id="login-btn">
           Sign up
         </button>
       </form>
+
       <div id="signin-google" onClick={googleSignInHandler}>
         <img src={googlelogo} alt="" />
         Continue with Google
