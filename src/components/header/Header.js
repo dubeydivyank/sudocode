@@ -4,10 +4,13 @@ import login from "../../svg/login.svg";
 import userIcon from "../../svg/user.svg";
 import Modal from "../modal/Modal";
 import ReactDOM from "react-dom";
+import { useAuthContext } from "../../context/AuthContext";
 
-const Header = ({ user }) => {
+// const Header = ({ user }) => {
+const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const { user } = useAuthContext();
 
   const modalHandler = () => {
     setModalOpen(!modalOpen);
@@ -31,7 +34,7 @@ const Header = ({ user }) => {
       {/* {modalOpen && <Modal user={user} setModalOpen={setModalOpen} />} */}
       {modalOpen &&
         ReactDOM.createPortal(
-          <Modal user={user} setModalOpen={setModalOpen} />,
+          <Modal setModalOpen={setModalOpen} />,
           document.getElementById("overlay-root")
         )}
     </div>

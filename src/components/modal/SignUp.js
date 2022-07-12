@@ -1,24 +1,26 @@
 import React from "react";
 import { useState } from "react";
-import "./Login.css";
+// import "./SignUp.css";
+// import { auth } from "../../firebase";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
 import close from "../../svg/close.svg";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
 import googlelogo from "../../svg/google-logo.png";
+import { useAuthContext } from "../../context/AuthContext";
 
-const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
+const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { signUp } = useAuthContext();
 
-  const loginHandler = async (e) => {
+  const signUpHandler = async (e) => {
     e.preventDefault();
+    console.log("signup clicked");
     setError("");
     try {
-      await signInWithEmailAndPassword(auth, email, password).then;
-      setModalOpen(false)();
+      await signUp(email, password);
+      setModalOpen(false);
     } catch (error) {
-      console.log(error);
       setError(error.message);
     }
   };
@@ -34,10 +36,10 @@ const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
         }}
       />
 
-      <h1 className="modal-heading">Login</h1>
+      <h1 className="modal-heading">Sign Up</h1>
 
       {error && <div className="error-alert">{error}</div>}
-      <form onSubmit={loginHandler}>
+      <form onSubmit={signUpHandler}>
         <input
           className="input-field"
           type="email"
@@ -57,10 +59,10 @@ const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
         />
 
         <button type="submit" id="login-btn">
-          Login
+          Sign up
         </button>
       </form>
-      <div id="signin-google" onClick={googleSignIn}>
+      <div id="signin-google" onClick={googleSignInHandler}>
         <img src={googlelogo} alt="" />
         Continue with Google
       </div>
@@ -68,13 +70,13 @@ const Login = ({ setLoginPage, setModalOpen, googleSignIn }) => {
       <div
         className="redirect-modal"
         onClick={() => {
-          setLoginPage(false);
+          setLoginPage(true);
         }}
       >
-        Don't have an Account ?
+        Already have an account ?
       </div>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;

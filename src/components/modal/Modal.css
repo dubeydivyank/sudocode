@@ -64,7 +64,7 @@
   border: 1px solid #444444;
   border-radius: 4px;
   height: 2.2rem;
-  width: 80%;
+  width: 96%;
   margin: 0.5rem 0 0.5rem 0;
   padding-left: 8px;
 }
@@ -73,7 +73,7 @@
   font: inherit;
   font-weight: 700;
   height: 2.2rem;
-  width: 80%;
+  width: 100%;
   background-color: rgb(187, 192, 192);
   border: none;
   border-radius: 6px;
@@ -133,8 +133,18 @@
   top: 5.2rem;
   background-color: #fbdad9;
   color: #775050;
-  width: 80%;
+  width: 77%;
   padding: 0.5rem 0.3rem 0.5rem 0.3rem;
   border: 2px solid #e9cbcc;
   border-radius: 6px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 80%;
 }

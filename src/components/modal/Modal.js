@@ -3,23 +3,31 @@ import { useState } from "react";
 import "./Modal.css";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+// import { signOut } from "firebase/auth";
+// import { auth } from "../../firebase";
+// import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useAuthContext } from "../../context/AuthContext";
 
 import close from "../../svg/close.svg";
 
-const Modal = ({ user, setModalOpen }) => {
+// const Modal = ({ user, setModalOpen }) => {
+const Modal = ({ setModalOpen }) => {
   const [loginPage, setLoginPage] = useState(true);
 
-  const logoutHandler = () => {
-    signOut(auth);
-    setModalOpen(false);
+  const { user, logOut, googleSignIn } = useAuthContext();
+
+  const logoutHandler = async () => {
+    try {
+      await logOut().then(setModalOpen(false));
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
-  const googleSignIn = () => {
-    const googleAuthProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleAuthProvider);
+  const googleSignInHandler = async () => {
+    // const googleAuthProvider = new GoogleAuthProvider();
+    // return signInWithPopup(auth, googleAuthProvider);
+    await googleSignIn();
   };
 
   if (user) {
@@ -50,13 +58,13 @@ const Modal = ({ user, setModalOpen }) => {
           <Login
             setLoginPage={setLoginPage}
             setModalOpen={setModalOpen}
-            googleSignIn={googleSignIn}
+            googleSignInHandler={googleSignInHandler}
           />
         ) : (
           <SignUp
             setLoginPage={setLoginPage}
             setModalOpen={setModalOpen}
-            googleSignIn={googleSignIn}
+            googleSignInHandler={googleSignInHandler}
           />
         )}
       </div>
