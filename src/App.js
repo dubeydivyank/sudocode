@@ -1,8 +1,8 @@
+import { AuthContextProvider } from "./context/AuthContext";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
 import SideBar from "./components/sidebar/SideBar";
-import { useState } from "react";
-import { AuthContextProvider } from "./context/AuthContext";
 import Home from "./components/pages/Home";
 import PlayLists from "./components/pages/Playlists";
 import Liked from "./components/pages/Liked";
@@ -10,25 +10,20 @@ import WatchLater from "./components/pages/WatchLater";
 import History from "./components/pages/History";
 
 function App() {
-  const [tabIndex, setTabIndex] = useState(1);
-
-  const tabChangeHandler = (index) => {
-    setTabIndex(index);
-  };
-
   return (
     <AuthContextProvider>
       <div className="App">
         <Header />
-
-        <SideBar tabIndex={tabIndex} tabChangeHandler={tabChangeHandler} />
+        <SideBar />
 
         <div className="pages">
-          {tabIndex === 1 && <Home />}
-          {tabIndex === 2 && <PlayLists />}
-          {tabIndex === 3 && <Liked />}
-          {tabIndex === 4 && <WatchLater />}
-          {tabIndex === 5 && <History />}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/playlists" element={<PlayLists />} />
+            <Route path="/liked" element={<Liked />} />
+            <Route path="/watchlater" element={<WatchLater />} />
+            <Route path="/history" element={<History />} />
+          </Routes>
         </div>
       </div>
     </AuthContextProvider>

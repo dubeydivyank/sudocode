@@ -1,14 +1,22 @@
 import "./SideBar.css";
+import { useState } from "react";
 import home from "../../svg/home.svg";
 import playlist from "../../svg/playlist.svg";
 import liked from "../../svg/liked.svg";
 import watchLater from "../../svg/watch-later.svg";
 import history from "../../svg/history.svg";
+import { Link } from "react-router-dom";
 
-const SideBar = ({ tabIndex, tabChangeHandler }) => {
+const SideBar = () => {
+  const [tabIndex, setTabIndex] = useState(1);
+  const tabChangeHandler = (index) => {
+    setTabIndex(index);
+  };
+
   return (
     <div className="sidebar--container">
-      <div
+      <Link
+        to={"/"}
         className={tabIndex === 1 ? "tab active-tab" : "tab"}
         onClick={() => {
           tabChangeHandler(1);
@@ -16,8 +24,10 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
       >
         <img src={home} alt="home-icon" />
         Home
-      </div>
-      <div
+      </Link>
+
+      <Link
+        to={"/playlists"}
         className={tabIndex === 2 ? "tab active-tab" : "tab"}
         onClick={() => {
           tabChangeHandler(2);
@@ -25,8 +35,9 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
       >
         <img src={playlist} alt="playlist-icon" />
         Playlists
-      </div>
-      <div
+      </Link>
+      <Link
+        to={"/liked"}
         className={tabIndex === 3 ? "tab active-tab" : "tab"}
         onClick={() => {
           tabChangeHandler(3);
@@ -34,8 +45,9 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
       >
         <img src={liked} alt="liked-icon" />
         Liked
-      </div>
-      <div
+      </Link>
+      <Link
+        to={"/watchlater"}
         className={tabIndex === 4 ? "tab active-tab" : "tab"}
         onClick={() => {
           tabChangeHandler(4);
@@ -43,8 +55,10 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
       >
         <img src={watchLater} alt="watchlater-icon" />
         Watch Later
-      </div>
-      <div
+      </Link>
+
+      <Link
+        to={"/history"}
         className={tabIndex === 5 ? "tab active-tab" : "tab"}
         onClick={() => {
           tabChangeHandler(5);
@@ -52,7 +66,7 @@ const SideBar = ({ tabIndex, tabChangeHandler }) => {
       >
         <img src={history} alt="history-icon" />
         History
-      </div>
+      </Link>
     </div>
   );
 };

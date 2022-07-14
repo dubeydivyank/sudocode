@@ -246,13 +246,11 @@
       "liked": [
         {
           "id": "1",
-          "video": {
-            "title": "Introduction to System Design | Part 1",
-            "playlist": "System Design Primer Course",
-            "url": "https://www.youtube.com/watch?v=FSR1s2b-l_I",
-            "date-added": "Aug 21, 2020",
-            "thumbnail": "FSR1s2b-l_I"
-          }
+          "title": "Introduction to System Design | Part 1",
+          "playlist": "System Design Primer Course",
+          "url": "https://www.youtube.com/watch?v=FSR1s2b-l_I",
+          "date-added": "Aug 21, 2020",
+          "thumbnail": "FSR1s2b-l_I"
         }
       ]
     }
