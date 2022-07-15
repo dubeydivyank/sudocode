@@ -1,15 +1,21 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import ReactPlayer from "react-player/lazy";
-import { useVideoContext } from "../../context/VideoContext";
+import ReactPlayer from "react-player";
+import data from "../../data.json";
 import "./VideoPage.css";
+import { useParams } from "react-router-dom";
 
 const VideoPage = () => {
-  const { video } = useVideoContext();
-  console.log(video);
+  let { videoId } = useParams();
+
+  const video = data.videos.filter((vid) => {
+    return vid.thumbnail === videoId;
+  });
+
   return (
     <div className="video-container">
-      <ReactPlayer url={video.url} controls={true} />
+      {video.map((vid) => {
+        return <ReactPlayer url={vid.url} controls={true} />;
+      })}
     </div>
   );
 };

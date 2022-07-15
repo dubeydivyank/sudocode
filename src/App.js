@@ -1,5 +1,4 @@
 import { AuthContextProvider } from "./context/AuthContext";
-import { VideoContextProvider } from "./context/VideoContext";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
@@ -19,16 +18,14 @@ function App() {
         <SideBar />
 
         <div className="pages">
-          <VideoContextProvider>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/playlists" element={<PlayLists />} />
-              <Route path="/liked" element={<Liked />} />
-              <Route path="/watchlater" element={<WatchLater />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/video/:videoId" element={<VideoPage />} />
-            </Routes>
-          </VideoContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/playlists" element={<PlayLists />} />
+            <Route path="/liked" element={<Liked />} />
+            <Route path="/watchlater" element={<WatchLater />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/video/:videoId" element={<VideoPage />} />
+          </Routes>
         </div>
       </div>
     </AuthContextProvider>
