@@ -3,9 +3,8 @@ const Liked = () => {
   return (
     <>
       {data.users["ajnlfaiwefnlaksdlvmlaedf"].liked.map((vid) => {
-        return <div>vid.title</div>;
+        return <div>{vid.title}</div>;
       })}
-      <div>Liked</div>
     </>
   );
 };
