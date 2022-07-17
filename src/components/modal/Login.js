@@ -1,6 +1,6 @@
 import { useState } from "react";
-import close from "../../svg/close.svg";
-import googlelogo from "../../svg/google-logo.png";
+import close from "../../assets/svg/close.svg";
+import googlelogo from "../../assets/svg/google-logo.png";
 import { useAuthContext } from "../../context/AuthContext";
 
 const Login = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {

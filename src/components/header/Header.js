@@ -1,7 +1,7 @@
 import "./Header.css";
 import { useState } from "react";
-import login from "../../svg/login.svg";
-import userIcon from "../../svg/user.svg";
+import login from "../../assets/svg/login.svg";
+import userIcon from "../../assets/svg/user.svg";
 import Modal from "../modal/Modal";
 import ReactDOM from "react-dom";
 import { useAuthContext } from "../../context/AuthContext";

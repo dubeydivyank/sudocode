@@ -5,7 +5,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import { useAuthContext } from "../../context/AuthContext";
 
-import close from "../../svg/close.svg";
+import close from "../../assets/svg/close.svg";
 
 const Modal = ({ setModalOpen }) => {
   const [loginPage, setLoginPage] = useState(true);

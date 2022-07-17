@@ -1,10 +1,10 @@
 import "./SideBar.css";
 import { useState } from "react";
-import home from "../../svg/home.svg";
-import playlist from "../../svg/playlist.svg";
-import liked from "../../svg/liked.svg";
-import watchLater from "../../svg/watch-later.svg";
-import history from "../../svg/history.svg";
+import home from "../../assets/svg/home.svg";
+import playlist from "../../assets/svg/playlist.svg";
+import liked from "../../assets/svg/liked.svg";
+import watchLater from "../../assets/svg/watch-later.svg";
+import history from "../../assets/svg/history.svg";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
