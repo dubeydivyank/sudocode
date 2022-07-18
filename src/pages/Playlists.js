@@ -1,17 +1,60 @@
-import { useDbContext } from "../context/DbContext";
+import "./Playlists.css";
+import { useState } from "react";
+import VideoList from "./VideoList";
 
 const Playlists = () => {
-  const { videos } = useDbContext();
+  const [playlist, setPlaylist] = useState();
 
+  const selectPlaylistHandler = (e) => {
+    setPlaylist(e.target.innerText);
+  };
   return (
-    <>
-      <div>
-        {videos.map((video) => {
-          return <div>{video.title}</div>;
-        })}
+    <div style={{ display: "flex" }}>
+      <div className="playlist-names">
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
+          System Design Primer Course
+        </div>
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
+          Low Level Design
+        </div>
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
+          Resume Building
+        </div>
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
+          Mock Interviews
+        </div>
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
+          Misc
+        </div>
       </div>
-      <div>PlayLists</div>
-    </>
+
+      <div>{playlist && <VideoList playlist={playlist} />}</div>
+    </div>
   );
 };
 

@@ -108,14 +108,14 @@
     {
       "id": "16",
       "title": "How to build a resume that gets shortlisted in India and abroad?",
-      "playlist": "Misc",
+      "playlist": "Resume Building",
       "date-added": "Dec 14, 2020",
       "ytVideoID": "jZZzvxdXPNk"
     },
     {
       "id": "17",
       "title": "Resume tips (Part 2)| College students ask interview, resume and other career related queries",
-      "playlist": "Misc",
+      "playlist": "Resume Building",
       "date-added": "Dec 21, 2020",
       "ytVideoID": "p_r2WKG_3s0"
     },
@@ -195,6 +195,279 @@
       "playlist": "System Design Primer Course",
       "date-added": "Mar 15, 2021",
       "ytVideoID": "62adurZ_Muw"
+    },
+    {
+      "id": "29",
+      "title": "When should you start learning System Design? Timeline and experience for System Design Interviews",
+      "playlist": "Misc",
+      "date-added": "Mar 22, 2021",
+      "ytVideoID": "wm3tXugf3u0"
+    },
+    {
+      "id": "30",
+      "title": "High Level Design vs Low Level Design | HLD vs LLD | System Design Concepts",
+      "playlist": "Misc",
+      "date-added": "Mar 30, 2021",
+      "ytVideoID": "H703ErIrby8"
+    },
+    {
+      "id": "31",
+      "title": "A simple introduction to basics of hashing & need for Consistent Hashing",
+      "playlist": "System Design Primer Course",
+      "date-added": "Apr 19, 2021",
+      "ytVideoID": "cITtFpz3a3Y"
+    },
+    {
+      "id": "32",
+      "title": "Basics of consistent hashing in plain english | System Design fundamentals",
+      "playlist": "System Design Primer Course",
+      "date-added": "Apr 29, 2021",
+      "ytVideoID": "oKAU6LaYFhw"
+    },
+    {
+      "id": "33",
+      "title": "Foundation of System Design Interview starting with Functional vs Non Functional Requirements",
+      "playlist": "System Design Primer Course",
+      "date-added": "May 24, 2021",
+      "ytVideoID": "xRdjEd-VQTU"
+    },
+    {
+      "id": "34",
+      "title": "How to solve capacity estimation problems faster? | Thumb rules and quick tips | System Design",
+      "playlist": "System Design Primer Course",
+      "date-added": "June 3, 2021",
+      "ytVideoID": "VBw703pjC3E"
+    },
+    {
+      "id": "35",
+      "title": "5 mistakes I made in System Design Interviews that you should avoid | System Design Tutorials | 2021",
+      "playlist": "System Design Primer Course",
+      "date-added": "June 11, 2021",
+      "ytVideoID": "ySfpftMZnoU"
+    },
+    {
+      "id": "36",
+      "title": "10K Special | Gratitude | New courses announcements and updates | REST APIs & LLD ",
+      "playlist": "System Design Primer Course",
+      "date-added": "June 27, 2021",
+      "ytVideoID": "cg1f_5IY2EM"
+    },
+    {
+      "id": "37",
+      "title": "What is a REST API? Basics of HTTP REST APIs, taxonomy , HTTP verbs and more",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "July 5, 2021",
+      "ytVideoID": "ST8XxjOTIsg"
+    },
+    {
+      "id": "38",
+      "title": "What is an HTTP POST API? REST API Series,POST method, response codes, errors, best practices & more",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "July 19, 2021",
+      "ytVideoID": "aumDleTg_UQ"
+    },
+    {
+      "id": "39",
+      "title": "Low Level Design of a Fitness App and Mock LLD interview with Intuit SWE @Keerti Purswani",
+      "playlist": "Mock Interviews",
+      "date-added": "July 28, 2021",
+      "ytVideoID": "7-A5NgGrJqY"
+    },
+    {
+      "id": "40",
+      "title": "The APIs that power majority of the content you see on internet!!!!",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Aug 17, 2021",
+      "ytVideoID": "cNT8TTIZp2Y"
+    },
+    {
+      "id": "41",
+      "title": "PUT/PATCH REST APIs - All you need to know about why and where to use Put vs Patch",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Sep 15, 2021",
+      "ytVideoID": "LJajkjI5RHE"
+    },
+    {
+      "id": "42",
+      "title": "What is a Delete REST API and how it deletes data from the servers?",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Sep 25, 2021",
+      "ytVideoID": "vOqTvDAlzwQ"
+    },
+    {
+      "id": "43",
+      "title": "System Design Interview: Architecture of Amazon, Flipkart like e-commerce system with @Gaurav Sen",
+      "playlist": "Mock Interviews",
+      "date-added": "Oct 2, 2021",
+      "ytVideoID": "2BWr0fsDSs0"
+    },
+    {
+      "id": "44",
+      "title": "How to design API that display and filter through millions of products. REST API Filters & Pagination",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Oct 9, 2021",
+      "ytVideoID": "MbslvX0AMVE"
+    },
+    {
+      "id": "45",
+      "title": "How REST APIs support upload of huge data and long running processes | Asynchronous REST API",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Oct 16, 2021",
+      "ytVideoID": "J4J-eHq_Oms"
+    },
+    {
+      "id": "46",
+      "title": "How to apply for master's in computer science(online) from Georgia Tech(OMSCS); costs, time & effort",
+      "playlist": "Misc",
+      "date-added": "Oct 23, 2021",
+      "ytVideoID": "0D2GPHbLsZ4"
+    },
+    {
+      "id": "47",
+      "title": "What are the different API rate limiting methods needed while designing large scale systems & why?",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Oct 30, 2021",
+      "ytVideoID": "YSW3UE5AFD4"
+    },
+    {
+      "id": "48",
+      "title": "Life of a Software Engineer with full time job and online masters. Work load of OMSCS, Georgia Tech",
+      "playlist": "Misc",
+      "date-added": "Nov 6, 2021",
+      "ytVideoID": "A6FhXa7i1bk"
+    },
+    {
+      "id": "49",
+      "title": "How to use headers in REST APIs? Different types of headers, how and where to use?",
+      "playlist": "REST APIs Made Easy",
+      "date-added": "Nov 20, 2021",
+      "ytVideoID": "76CcJ90Lz4U"
+    },
+    {
+      "id": "50",
+      "title": "Why to choose online masters vs oncampus masters in Computer Science? Path to field change/Job/Phd",
+      "playlist": "Misc",
+      "date-added": "Nov 14, 2021",
+      "ytVideoID": "E5iT4lIE0SE"
+    },
+    {
+      "id": "51",
+      "title": "How to get on campus admission to masters(CS) in USA through online masters(Georgia Tech's OMSCS)",
+      "playlist": "Misc",
+      "date-added": "Nov 27, 2021",
+      "ytVideoID": "VuHzCR9QsGQ"
+    },
+    {
+      "id": "52",
+      "title": "How to start learning low level design using these five books and the order in which to read",
+      "playlist": "Low Level Design",
+      "date-added": "Dec 7, 2021",
+      "ytVideoID": "aJxx-Y42rF0"
+    },
+    {
+      "id": "53",
+      "title": "Low Level Design 101 | Steps and Resources to learn LLD as a beginner",
+      "playlist": "Low Level Design",
+      "date-added": "Dec 12, 2021",
+      "ytVideoID": "B3zrIwz_t4M"
+    },
+    {
+      "id": "54",
+      "title": "Microsoft engineer @Nishant Chahar shares his experience from first year of Software Engineering",
+      "playlist": "Misc",
+      "date-added": "Jan 15, 2022",
+      "ytVideoID": "EjzW36ZqBYk"
+    },
+    {
+      "id": "55",
+      "title": "Low Level Design 102 | What is LLD ? Simplified steps to learn and break LLD problem",
+      "playlist": "Low Level Design",
+      "date-added": "Jan 23, 2022",
+      "ytVideoID": "5Tz9EUMHOGI"
+    },
+    {
+      "id": "56",
+      "title": "Low Level Design 103 | How to design low level applications using objects and classes | OOD",
+      "playlist": "Low Level Design",
+      "date-added": "Feb 6, 2022",
+      "ytVideoID": "FbQYifw9Be8"
+    },
+    {
+      "id": "57",
+      "title": "How he switched from a Volleyball coach to Devops Engineer | Docker Captain | @Francesco Ciulla",
+      "playlist": "Low Level Design",
+      "date-added": "Feb 14, 2022",
+      "ytVideoID": "TA-rj5xN5zo"
+    },
+    {
+      "id": "58",
+      "title": "Low Level Design 104 | How to build Classes in Object Oriented Design",
+      "playlist": "Low Level Design",
+      "date-added": "Feb 24, 2022",
+      "ytVideoID": "_wmyYdOkCo4"
+    },
+    {
+      "id": "59",
+      "title": "Low Level Design 105 | Single Responsibility Principle in SOLID",
+      "playlist": "Low Level Design",
+      "date-added": "Mar 6, 2022",
+      "ytVideoID": "-T0H--a8WnY"
+    },
+    {
+      "id": "60",
+      "title": "This is why most people fail interviews",
+      "playlist": "Misc",
+      "date-added": "Mar 23, 2022",
+      "ytVideoID": "xxcuevPnoYQ"
+    },
+    {
+      "id": "61",
+      "title": "Low Level Design 106 | Inheritance and Polymorphism",
+      "playlist": "Low Level Design",
+      "date-added": "Apr 30, 2022",
+      "ytVideoID": "tIavGKafBV8"
+    },
+    {
+      "id": "62",
+      "title": "Low Level Design 107 | Liskov Substitution Principle",
+      "playlist": "Low Level Design",
+      "date-added": "May 20, 2022",
+      "ytVideoID": "HbGDobtxzWk"
+    },
+    {
+      "id": "63",
+      "title": "Low Level Design 108 | Interface Segregation Principle",
+      "playlist": "Low Level Design",
+      "date-added": "May 25, 2022",
+      "ytVideoID": "-E-E6pd-psU"
+    },
+    {
+      "id": "64",
+      "title": "Low Level Design 108 | Dependency Inversion Principle",
+      "playlist": "Low Level Design",
+      "date-added": "Jun 6, 2022",
+      "ytVideoID": "_CQuOfIqaGE"
+    },
+    {
+      "id": "65",
+      "title": "What are Design Patterns? | Design Patterns 101",
+      "playlist": "Design Patterns",
+      "date-added": "Jun 15, 2022",
+      "ytVideoID": "FM_pRefVCB4"
+    },
+    {
+      "id": "66",
+      "title": "Types of Design Patterns | Design Patterns 102",
+      "playlist": "Design Patterns",
+      "date-added": "Jun 25, 2022",
+      "ytVideoID": "1004gyjLhkA"
+    },
+    {
+      "id": "67",
+      "title": "The importance of soft skills for growth of software engineers",
+      "playlist": "Misc",
+      "date-added": "Jul 11, 2022",
+      "ytVideoID": "pl2Yebi93CM"
     }
   ],
   "users": {
