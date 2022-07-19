@@ -1,3 +1,17 @@
-/* .video-container {
-  width: 200px;
-} */
+.video-container {
+  position: relative;
+  /* display: grid; */
+  height: 100%;
+  margin: 2rem;
+}
+
+.like-button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  background-color: rgb(226, 226, 226);
+}
+.like-button:hover {
+  background-color: rgb(187, 192, 192);
+}

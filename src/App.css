@@ -1,5 +1,5 @@
 .pages {
-  position: relative;
+  position: absolute;
   height: calc(100vh - 5rem);
   width: calc(100% - 15rem);
   /* background-color: rgb(187, 192, 192); */

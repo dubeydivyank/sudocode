@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { createContext, useContext } from "react";
 import { db } from "../firebase";
-import { set, ref, onValue, update, remove } from "firebase/database";
+import { ref, onValue, update, remove } from "firebase/database";
 import { useAuthContext } from "./AuthContext";
 
 const dbContext = createContext();
@@ -11,6 +11,7 @@ const DbContextProvider = ({ children }) => {
 
   const [videos, setVideos] = useState([]);
   const [liked, setLiked] = useState({});
+  const [watchLater, setWatchLater] = useState({});
 
   useEffect(() => {
     const videoRef = ref(db, "videos/");
@@ -23,11 +24,21 @@ const DbContextProvider = ({ children }) => {
   useEffect(() => {
     if (user) {
       const uid = user.uid;
-      const videoRef = ref(db, "users/" + uid + "/liked");
-      onValue(videoRef, (snapshot) => {
+      const likedRef = ref(db, "users/" + uid + "/liked");
+      onValue(likedRef, (snapshot) => {
         const data = snapshot.val();
         setLiked(data);
-        console.log(data);
+      });
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (user) {
+      const uid = user.uid;
+      const watchLaterRef = ref(db, "users/" + uid + "/watchlist");
+      onValue(watchLaterRef, (snapshot) => {
+        const data = snapshot.val();
+        setWatchLater(data);
       });
     }
   }, [user]);
@@ -56,12 +67,13 @@ const DbContextProvider = ({ children }) => {
     <dbContext.Provider
       value={{
         videos,
+        liked,
+        watchLater,
         setVideos,
         addToWatchList,
         removeFromWatchlist,
         addToLiked,
         removeFromLiked,
-        liked,
       }}
     >
       {children}

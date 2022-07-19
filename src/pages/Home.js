@@ -57,15 +57,17 @@ const Home = () => {
                   alt=""
                 ></img>
               </Link>
-              <div>{video.title}</div>
-              <div>{video["date-added"]}</div>
-              <button
+              <div className="video-description">
+                <div>{video.title}</div>
+                <div className="video-date">{video["date-added"]}</div>
+              </div>
+              {/* <button
                 onClick={(e) => {
                   addToLikedHandler(video);
                 }}
               >
                 like
-              </button>
+              </button> */}
             </div>
           );
         })}

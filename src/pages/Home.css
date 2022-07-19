@@ -1,15 +1,20 @@
 .cards-container {
-  position: absolute;
+  /* position: absolute; */
   /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   /* justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-auto-rows: minmax(auto, auto);
 }
 
 .video-card {
-  height: 20rem;
-  width: 18rem;
+  /* display: grid; */
+  /* justify-content: space-evenly; */
+  /* height: 20rem; */
+  /* width: 18rem; */
   margin: 2rem;
   background-color: rgb(226, 226, 226);
   border-radius: 6px;
@@ -18,4 +23,14 @@
 .thumbnail {
   width: 100%;
   cursor: pointer;
+}
+.video-description {
+  margin: 0.5rem;
+}
+
+.video-date {
+  /* position: relative; */
+  font-size: 0.8rem;
+  color: #666666;
+  margin-top: 1rem;
 }
