@@ -33,6 +33,14 @@ const Playlists = () => {
             selectPlaylistHandler(e);
           }}
         >
+          Design Patterns
+        </div>
+        <div
+          className="list-name"
+          onClick={(e) => {
+            selectPlaylistHandler(e);
+          }}
+        >
           Resume Building
         </div>
         <div

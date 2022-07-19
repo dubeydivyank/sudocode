@@ -7,7 +7,7 @@ import AlertModal from "../components/modal/AlertModal";
 import ReactDOM from "react-dom";
 
 const Home = () => {
-  const { videos, setVideos } = useDbContext();
+  const { videos, setVideos, addToLiked, removeFromLiked } = useDbContext();
   const { user } = useAuthContext();
   const [openModal, setOpenModal] = useState(false);
   const [alert, setAlert] = useState("");
@@ -26,21 +26,14 @@ const Home = () => {
     setVideos([...sortedArray]);
   };
 
-  let likedVideo = [];
-  const addToLiked = (videoID) => {
+  const addToLikedHandler = (video) => {
     if (!user) {
       setOpenModal(true);
       setAlert("Please Log in to continue");
       return;
     }
-
-    const clickedVideo = videos.filter((vid) => {
-      return vid.ytVideoID === videoID;
-    });
-
-    likedVideo.push(clickedVideo[0]);
-
-    console.log(likedVideo);
+    addToLiked(user.uid, video);
+    // removeFromLiked(user.uid, video);
   };
 
   return (
@@ -68,7 +61,7 @@ const Home = () => {
               <div>{video["date-added"]}</div>
               <button
                 onClick={(e) => {
-                  addToLiked(e.target.parentNode.id);
+                  addToLikedHandler(video);
                 }}
               >
                 like

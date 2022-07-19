@@ -40,6 +40,10 @@ export function AuthContextProvider({ children }) {
     return () => {
       unsubscribe();
     };
+    // onAuthStateChanged(auth, (currentuser) => {
+    //   // console.log("Auth", currentuser);
+    //   setUser(currentuser);
+    // });
   }, []);
 
   return (
