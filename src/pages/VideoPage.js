@@ -120,12 +120,12 @@ const VideoPage = () => {
                     </span>
                   ) : (
                     <span
-                      className="like-button"
+                      className="liked-button"
                       onClick={() => {
                         dislikeHandler(vid);
                       }}
                     >
-                      Unlike
+                      Liked
                     </span>
                   )}
 
@@ -140,12 +140,12 @@ const VideoPage = () => {
                     </span>
                   ) : (
                     <span
-                      className="like-button"
+                      className="liked-button"
                       onClick={() => {
                         removeWatchLaterHandler(vid);
                       }}
                     >
-                      Remove from WatchLater
+                      Added to WatchLater
                     </span>
                   )}
                 </div>

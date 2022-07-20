@@ -2,14 +2,8 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useDbContext } from "../context/DbContext";
 
-import { useState } from "react";
-import AlertModal from "../components/modal/AlertModal";
-import ReactDOM from "react-dom";
-
 const Home = () => {
   const { videoList, setVideoList } = useDbContext();
-  // const [openModal, setOpenModal] = useState(false);
-  // const [alert, setAlert] = useState("");
 
   const olderFirstSortHandler = () => {
     const sortedArray = videoList.sort((a, b) => {
@@ -27,11 +21,6 @@ const Home = () => {
 
   return (
     <>
-      {/* {openModal &&
-        ReactDOM.createPortal(
-          <AlertModal setOpenModal={setOpenModal} alert={alert} />,
-          document.getElementById("overlay-root")
-        )} */}
       <button onClick={olderFirstSortHandler}>oldest first</button>
       <button onClick={newerFirstSortHandler}>newest first</button>
 
