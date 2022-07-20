@@ -9,6 +9,7 @@ const Liked = () => {
 
   return (
     <>
+      {!user && <div>Login to see liked videos. </div>}
       {liked ? (
         <div className="cards-container">
           {Object.values(liked).map((video) => {
@@ -23,25 +24,29 @@ const Liked = () => {
                 </Link>
                 <div className="video-description">
                   <div>{video.title}</div>
-
-                  <span className="video-date">{video["date-added"]}</span>
-                  <img
-                    src={trash}
-                    alt="x"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      removeFromLiked(user.uid, video);
-                    }}
-                  />
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div className="video-date">{video["date-added"]}</div>
+                    <div className="delete-icon">
+                      <img
+                        src={trash}
+                        alt="x"
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          removeFromLiked(user.uid, video);
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       ) : (
-        <div>add to liked</div>
+        <div>Looks like you haven't liked anything yet. </div>
       )}
-      {/* {!user ? <div>not logged in</div> : <div>logged in</div>} */}
     </>
   );
 };

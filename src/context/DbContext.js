@@ -10,6 +10,7 @@ const DbContextProvider = ({ children }) => {
   const { user } = useAuthContext();
 
   const [videos, setVideos] = useState([]);
+  const [videoList, setVideoList] = useState([]);
   const [liked, setLiked] = useState({});
   const [watchLater, setWatchLater] = useState({});
 
@@ -18,6 +19,7 @@ const DbContextProvider = ({ children }) => {
     onValue(videoRef, (snapshot) => {
       const data = snapshot.val();
       setVideos(data);
+      setVideoList(data);
     });
   }, []);
 
@@ -74,6 +76,8 @@ const DbContextProvider = ({ children }) => {
         removeFromWatchlist,
         addToLiked,
         removeFromLiked,
+        videoList,
+        setVideoList,
       }}
     >
       {children}
