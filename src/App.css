@@ -1,8 +1,17 @@
 .pages {
   position: absolute;
   height: calc(100vh - 5rem);
+  /* height: 100vh; */
   width: calc(100% - 15rem);
-  /* background-color: rgb(187, 192, 192); */
   top: 5rem;
   left: 15rem;
+  background-color: var(--bg-color);
+}
+@media screen and (max-width: 950px) {
+  .pages {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+  }
 }

@@ -5,16 +5,22 @@ import playlist from "../../assets/svg/playlist.svg";
 import liked from "../../assets/svg/liked.svg";
 import watchLater from "../../assets/svg/watch-later.svg";
 import history from "../../assets/svg/history.svg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const SideBar = () => {
+const SideBar = ({ sideDrawer, setSideDrawer }) => {
   const [tabIndex, setTabIndex] = useState(1);
+
   const tabChangeHandler = (index) => {
     setTabIndex(index);
   };
 
   return (
-    <div className="sidebar--container">
+    <div
+      className={`sidebar--container ${sideDrawer ? "trans-on" : "trans-off"}`}
+      onClick={() => {
+        setSideDrawer(!sideDrawer);
+      }}
+    >
       <Link
         to={"/"}
         className={tabIndex === 1 ? "tab active-tab" : "tab"}

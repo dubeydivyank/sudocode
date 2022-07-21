@@ -1,7 +1,7 @@
 import { AuthContextProvider } from "./context/AuthContext";
 import { DbContextProvider } from "./context/DbContext";
 import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import SideBar from "./components/sidebar/SideBar";
@@ -13,12 +13,13 @@ import History from "./pages/History";
 import VideoPage from "./pages/VideoPage";
 
 function App() {
+  const [sideDrawer, setSideDrawer] = useState(false);
   return (
     <AuthContextProvider>
       <DbContextProvider>
-        <div className="App">
-          <Header />
-          <SideBar />
+        <div className="App light-theme">
+          <Header sideDrawer={sideDrawer} setSideDrawer={setSideDrawer} />
+          <SideBar sideDrawer={sideDrawer} setSideDrawer={setSideDrawer} />
 
           <div className="pages">
             <Routes>

@@ -1,5 +1,5 @@
 .modal-container {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -9,6 +9,7 @@
 .modal {
   height: 28rem;
   width: 24rem;
+  /* background-color: var(--bg-color); */
   background-color: rgb(226, 226, 226);
   border-radius: 8px;
 }

@@ -8,8 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
 import { useDbContext } from "../../context/DbContext";
 import searchLogo from "../../assets/svg/search.svg";
+import menu from "../../assets/svg/menu.svg";
 
-const Header = () => {
+const Header = ({ sideDrawer, setSideDrawer }) => {
   const { user } = useAuthContext();
   const { videos, setVideoList } = useDbContext();
   const [userInput, setUserInput] = useState("");
@@ -48,9 +49,15 @@ const Header = () => {
 
   return (
     <div className="header--container">
+      <img
+        className="sideDrawer-icon"
+        src={menu}
+        alt=""
+        onClick={() => setSideDrawer(!sideDrawer)}
+      />
       <div id="logo">sudoCode</div>
 
-      <div id="search-bar">
+      <div className="search-bar">
         <form onSubmit={searchInputSubmitHandler}>
           <input
             type="text"

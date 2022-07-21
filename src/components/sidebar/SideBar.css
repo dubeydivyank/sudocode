@@ -3,7 +3,7 @@
   height: 100%;
   width: 15rem;
   top: 5rem;
-  background-color: rgb(226, 226, 226);
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,16 +20,29 @@
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
-  color: #444444;
+  color: var(--font-color);
   font-weight: 700;
 }
 
 .active-tab {
-  background-color: rgb(187, 192, 192);
-  color: #000;
+  background-color: var(--highlight-color);
+  color: var(--font-color-sec);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+@media screen and (max-width: 950px) {
+  .trans-on {
+    left: 0;
+    transition: left 0.5s ease-out;
+  }
+
+  .trans-off {
+    left: -30.875rem;
+    transition: left 0.5s ease-out;
+  }
+
+  .sidebar--container {
+    /* width: 0rem; */
+    /* position: relative; */
+    z-index: 2;
+  }
 }
