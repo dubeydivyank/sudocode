@@ -7,8 +7,9 @@
   justify-content: space-between;
   color: var(--font-color);
   background-color: var(--bg-color);
-  z-index: 1;
+  z-index: 2;
 }
+
 .sideDrawer-icon {
   margin-left: 1.2rem;
   margin-top: 0.2rem;
@@ -21,6 +22,7 @@
   font-weight: 700;
   font-size: 1.8rem;
   padding-left: 3rem;
+  cursor: pointer;
 }
 
 #theme-toggle img {
@@ -42,6 +44,7 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search-bar form {
@@ -63,6 +66,40 @@ input:focus {
   cursor: pointer;
 }
 
+.mob-search-bar {
+  position: absolute;
+  /* display: none; */
+  visibility: hidden;
+  top: 4.3rem;
+  left: 50%;
+  transform: translate(-50%);
+  height: 2rem;
+  width: 90%;
+  background-color: var(--highlight-color);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.mob-search-bar form {
+  width: calc(100% - 2.8rem);
+}
+
+.mob-search-bar input {
+  height: 1.8rem;
+  width: 100%;
+  border: none;
+  padding-left: 0.5rem;
+  background-color: var(--highlight-color);
+}
+
+.mob-search-bar img {
+  padding: 5px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 950px) {
   .sideDrawer-icon {
     display: block;
@@ -71,5 +108,19 @@ input:focus {
 
   #logo {
     padding-left: 3.5rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+  .mob-search-bar {
+    /* display: block; */
+    visibility: visible;
+  }
+
+  #login-logout img {
+    height: 2rem;
+    margin: 0 1.5rem 0 1.8rem;
+    cursor: pointer;
   }
 }

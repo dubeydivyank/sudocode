@@ -48,16 +48,52 @@ const Header = ({ sideDrawer, setSideDrawer }) => {
   };
 
   return (
-    <div className="header--container">
-      <img
-        className="sideDrawer-icon"
-        src={menu}
-        alt=""
-        onClick={() => setSideDrawer(!sideDrawer)}
-      />
-      <div id="logo">sudoCode</div>
+    <div style={{ height: "7rem", backgroundColor: "var(--bg-color)" }}>
+      <div className="header--container">
+        <img
+          className="sideDrawer-icon"
+          src={menu}
+          alt=""
+          onClick={() => setSideDrawer(!sideDrawer)}
+        />
+        <div
+          id="logo"
+          onClick={() => {
+            navigate("/", { replace: true });
+          }}
+        >
+          sudoCode
+        </div>
 
-      <div className="search-bar">
+        <div className="search-bar">
+          <form onSubmit={searchInputSubmitHandler}>
+            <input
+              type="text"
+              placeholder="search"
+              value={userInput}
+              onChange={inputChangeHandler}
+            />
+          </form>
+          <img src={searchLogo} alt="" onClick={searchInputSubmitHandler} />
+        </div>
+
+        <div className="header--buttons">
+          <span id="login-logout">
+            {user ? (
+              <img src={userIcon} alt="user" onClick={modalHandler} />
+            ) : (
+              <img src={login} alt="login" onClick={modalHandler} />
+            )}
+          </span>
+        </div>
+
+        {modalOpen &&
+          ReactDOM.createPortal(
+            <Modal setModalOpen={setModalOpen} />,
+            document.getElementById("overlay-root")
+          )}
+      </div>
+      <div className="mob-search-bar">
         <form onSubmit={searchInputSubmitHandler}>
           <input
             type="text"
@@ -68,22 +104,6 @@ const Header = ({ sideDrawer, setSideDrawer }) => {
         </form>
         <img src={searchLogo} alt="" onClick={searchInputSubmitHandler} />
       </div>
-
-      <div className="header--buttons">
-        <span id="login-logout">
-          {user ? (
-            <img src={userIcon} alt="user" onClick={modalHandler} />
-          ) : (
-            <img src={login} alt="login" onClick={modalHandler} />
-          )}
-        </span>
-      </div>
-
-      {modalOpen &&
-        ReactDOM.createPortal(
-          <Modal setModalOpen={setModalOpen} />,
-          document.getElementById("overlay-root")
-        )}
     </div>
   );
 };

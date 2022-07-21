@@ -43,6 +43,10 @@
   .sidebar--container {
     /* width: 0rem; */
     /* position: relative; */
+
     z-index: 2;
+  }
+  .sidebar--container {
+    top: 7rem;
   }
 }
