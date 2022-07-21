@@ -19,7 +19,7 @@ const DbContextProvider = ({ children }) => {
     onValue(videoRef, (snapshot) => {
       const data = snapshot.val();
       setVideos(data);
-      setVideoList(data);
+      setVideoList([...data]);
     });
   }, []);
 
