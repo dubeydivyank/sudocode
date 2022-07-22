@@ -1,6 +1,6 @@
 import "./Playlists.css";
 import { useState } from "react";
-import VideoList from "./VideoList";
+import VideoList from "../VideoList";
 
 const Playlists = () => {
   const [playlist, setPlaylist] = useState();

@@ -45,7 +45,9 @@ const WatchLater = () => {
           })}
         </div>
       ) : (
-        <div>Looks like you haven't added anything yet. </div>
+        <div className="login-to-continue">
+          Looks like you haven't added anything yet.{" "}
+        </div>
       )}
     </>
   );

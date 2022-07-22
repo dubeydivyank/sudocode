@@ -5,12 +5,12 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import SideBar from "./components/sidebar/SideBar";
-import Home from "./pages/Home";
-import PlayLists from "./pages/Playlists";
+import Home from "./pages/home/Home";
+import PlayLists from "./pages/playlists/Playlists";
 import Liked from "./pages/Liked";
 import WatchLater from "./pages/WatchLater";
-import History from "./pages/History";
-import VideoPage from "./pages/VideoPage";
+import History from "./pages/history/History";
+import VideoPage from "./pages/videoPage/VideoPage";
 
 function App() {
   const [sideDrawer, setSideDrawer] = useState(false);

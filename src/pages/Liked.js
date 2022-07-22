@@ -47,7 +47,9 @@ const Liked = () => {
           })}
         </div>
       ) : (
-        <div>Looks like you haven't liked anything yet. </div>
+        <div className="login-to-continue">
+          Looks like you haven't liked anything yet.{" "}
+        </div>
       )}
     </>
   );

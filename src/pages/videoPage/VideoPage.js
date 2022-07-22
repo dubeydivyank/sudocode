@@ -1,24 +1,20 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
-import data from "../data.json";
+import data from "../../data.json";
 import "./VideoPage.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useAuthContext } from "../context/AuthContext";
-import { useDbContext } from "../context/DbContext";
+import { useAuthContext } from "../../context/AuthContext";
+import { useDbContext } from "../../context/DbContext";
 import ReactDOM from "react-dom";
-import AlertModal from "../components/modal/AlertModal";
-import likedIcon from "../assets/svg/liked.svg";
-import watchLaterIcon from "../assets/svg/watch-later.svg";
+import AlertModal from "../../components/modal/AlertModal";
+import likedIcon from "../../assets/svg/liked.svg";
+import watchLaterIcon from "../../assets/svg/watch-later.svg";
 
 const VideoPage = () => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isInWatchLater, setIsInWatchLater] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-  const [alert, setAlert] = useState("");
-
   //Context
   const {
+    videoList,
     liked,
     watchLater,
     addToLiked,
@@ -28,11 +24,23 @@ const VideoPage = () => {
   } = useDbContext();
   const { user } = useAuthContext();
 
+  const [isLiked, setIsLiked] = useState(false);
+  const [isInWatchLater, setIsInWatchLater] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [alert, setAlert] = useState("");
+
   //get video using video id in URL
+
   const { videoId } = useParams();
   const video = data.videos.filter((vid) => {
     return vid.ytVideoID === videoId;
   });
+
+  // const video = videoList.forEach((vid) => {
+  //   if (vid.ytVideoID === videoId) {
+  //     return [vid];
+  //   }
+  // });
 
   //Check if current video is in user's liked list
   useEffect(() => {
