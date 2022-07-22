@@ -88,7 +88,9 @@ const Playlists = () => {
         </div>
       </div>
 
-      <div>{playlist && <VideoList playlist={playlist} />}</div>
+      <div className="playlist-videos">
+        {playlist && <VideoList playlist={playlist} />}
+      </div>
     </div>
   );
 };

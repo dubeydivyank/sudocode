@@ -1,26 +1,64 @@
-.video-container {
+/* .video-container {
   position: relative;
-  /* display: grid; */
   height: 100%;
   margin: 2rem;
-}
+} */
 
 .like-button {
   cursor: pointer;
   border-radius: 8px;
   padding: 0.5rem;
   margin-left: 1rem;
-  background-color: rgb(226, 226, 226);
+  background-color: var(--bg-color);
+  box-shadow: 0px 1px 21px -2px var(--highlight-color);
 }
 
+.like-button img {
+  position: relative;
+  top: 0.35rem;
+  margin-right: 0.4rem;
+}
+.liked-button img {
+  position: relative;
+  top: 0.35rem;
+  margin-right: 0.4rem;
+}
 .liked-button {
   cursor: pointer;
   border-radius: 8px;
   padding: 0.5rem;
   margin-left: 1rem;
-  background-color: rgb(248, 148, 148);
+  background-color: var(--highlight-color);
 }
 
 .like-button:hover {
-  background-color: rgb(187, 192, 192);
+  background-color: var(--highlight-color);
 }
+
+#video-page-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  /* margin-top: 1rem; */
+  width: 80%;
+}
+
+#video-page-container > h2 {
+  margin-top: 1rem;
+}
+
+.react-player {
+  aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 950px) {
+  #video-page-container {
+    width: 90%;
+    margin-top: 1.5rem;
+  }
+}
+/* @media screen and (max-width: 500px) {
+  #video-page-container {
+    width: 90%;
+  }
+} */

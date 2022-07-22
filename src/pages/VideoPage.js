@@ -8,6 +8,8 @@ import { useAuthContext } from "../context/AuthContext";
 import { useDbContext } from "../context/DbContext";
 import ReactDOM from "react-dom";
 import AlertModal from "../components/modal/AlertModal";
+import likedIcon from "../assets/svg/liked.svg";
+import watchLaterIcon from "../assets/svg/watch-later.svg";
 
 const VideoPage = () => {
   const [isLiked, setIsLiked] = useState(false);
@@ -95,65 +97,84 @@ const VideoPage = () => {
           <AlertModal setOpenModal={setOpenModal} alert={alert} />,
           document.getElementById("overlay-root")
         )}
-      <div className="video-container">
-        {video.map((vid) => {
-          return (
-            <div style={{ height: "100%", width: "100%" }} key={vid.id}>
-              <ReactPlayer
-                url={`https://www.youtube.com/watch?v=${vid.ytVideoID}`}
-                controls={true}
-                width="100%"
-                height="70%"
-              />
-              <h1>{vid.title}</h1>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div>{vid["date-added"]}</div>
-                <div>
-                  {!isLiked ? (
-                    <span
-                      className="like-button"
-                      onClick={() => {
-                        likeHandler(vid);
-                      }}
-                    >
-                      Like
-                    </span>
-                  ) : (
-                    <span
-                      className="liked-button"
-                      onClick={() => {
-                        dislikeHandler(vid);
-                      }}
-                    >
-                      Liked
-                    </span>
-                  )}
 
-                  {!isInWatchLater ? (
-                    <span
-                      className="like-button"
-                      onClick={() => {
-                        watchLaterHandler(vid);
-                      }}
-                    >
-                      Watch Later
-                    </span>
-                  ) : (
-                    <span
-                      className="liked-button"
-                      onClick={() => {
-                        removeWatchLaterHandler(vid);
-                      }}
-                    >
-                      Added to WatchLater
-                    </span>
-                  )}
-                </div>
+      {video.map((vid) => {
+        return (
+          <div id="video-page-container" key={vid.id}>
+            <ReactPlayer
+              className="react-player"
+              url={`https://www.youtube.com/watch?v=${vid.ytVideoID}`}
+              controls={true}
+              width="auto"
+              height="auto"
+            />
+
+            <h2>{vid.title}</h2>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "0.5rem",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "1rem",
+                  color: "var(--font-color-date)",
+                  marginTop: "0.5rem",
+                }}
+              >
+                {vid["date-added"]}
+              </div>
+              <div>
+                {!isLiked ? (
+                  <span
+                    className="like-button"
+                    onClick={() => {
+                      likeHandler(vid);
+                    }}
+                  >
+                    <img src={likedIcon} alt="" />
+                    Like
+                  </span>
+                ) : (
+                  <span
+                    className="liked-button"
+                    onClick={() => {
+                      dislikeHandler(vid);
+                    }}
+                  >
+                    <img src={likedIcon} alt="" />
+                    Liked
+                  </span>
+                )}
+
+                {!isInWatchLater ? (
+                  <span
+                    className="like-button"
+                    onClick={() => {
+                      watchLaterHandler(vid);
+                    }}
+                  >
+                    <img src={watchLaterIcon} alt="" />
+                    Watch Later
+                  </span>
+                ) : (
+                  <span
+                    className="liked-button"
+                    onClick={() => {
+                      removeWatchLaterHandler(vid);
+                    }}
+                  >
+                    <img src={watchLaterIcon} alt="" />
+                    Added to WatchLater
+                  </span>
+                )}
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </>
   );
 };

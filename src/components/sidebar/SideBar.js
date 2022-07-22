@@ -63,7 +63,7 @@ const SideBar = ({ sideDrawer, setSideDrawer }) => {
         Watch Later
       </Link>
 
-      <Link
+      {/* <Link
         to={"/history"}
         className={tabIndex === 5 ? "tab active-tab" : "tab"}
         onClick={() => {
@@ -72,7 +72,7 @@ const SideBar = ({ sideDrawer, setSideDrawer }) => {
       >
         <img src={history} alt="history-icon" />
         History
-      </Link>
+      </Link> */}
     </div>
   );
 };

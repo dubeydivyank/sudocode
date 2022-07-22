@@ -74,3 +74,9 @@
 .sort-button-selected {
   background-color: var(--highlight-color);
 }
+
+@media screen and (max-width: 500px) {
+  #sort-buttons {
+    justify-content: space-around;
+  }
+}

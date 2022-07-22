@@ -5,7 +5,7 @@ const AlertModal = ({ setOpenModal, alert }) => {
   return (
     <div
       style={{
-        zIndex: "2",
+        zIndex: "6",
         position: "fixed",
         width: "100%",
         display: "flex",

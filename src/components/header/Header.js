@@ -10,6 +10,10 @@ import { useDbContext } from "../../context/DbContext";
 import searchLogo from "../../assets/svg/search.svg";
 import menu from "../../assets/svg/menu.svg";
 
+const Backdrop = () => {
+  return <div className="backdrop" />;
+};
+
 const Header = ({ sideDrawer, setSideDrawer }) => {
   const { user } = useAuthContext();
   const { videos, setVideoList } = useDbContext();
@@ -86,6 +90,11 @@ const Header = ({ sideDrawer, setSideDrawer }) => {
             )}
           </span>
         </div>
+        {modalOpen &&
+          ReactDOM.createPortal(
+            <Backdrop />,
+            document.getElementById("backdrop-root")
+          )}
 
         {modalOpen &&
           ReactDOM.createPortal(
@@ -93,6 +102,7 @@ const Header = ({ sideDrawer, setSideDrawer }) => {
             document.getElementById("overlay-root")
           )}
       </div>
+
       <div className="mob-search-bar">
         <form onSubmit={searchInputSubmitHandler}>
           <input

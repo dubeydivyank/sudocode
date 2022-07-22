@@ -33,7 +33,7 @@ const VideoList = ({ playlist }) => {
                 alt=""
               />
             </Link>
-            <div>
+            <div className="video-text">
               <div>{vid.title}</div>
               <div>{vid["date-added"]}</div>
             </div>
