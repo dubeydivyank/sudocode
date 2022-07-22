@@ -7,6 +7,14 @@
   left: 15rem;
   background-color: var(--bg-color);
 }
+
+.login-to-continue {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 950px) {
   .pages {
     position: absolute;

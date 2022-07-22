@@ -8,7 +8,7 @@ const WatchLater = () => {
   const { user } = useAuthContext();
   return (
     <>
-      {!user && <div>Login to see liked videos. </div>}
+      {!user && <h2 className="login-to-continue">Login to see watchlist. </h2>}
       {watchLater ? (
         <div className="cards-container">
           {Object.values(watchLater).map((video) => {

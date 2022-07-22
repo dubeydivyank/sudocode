@@ -26,6 +26,18 @@ const Home = () => {
     setVideoList([...sortedArray]);
   };
 
+  const addToBrowserHistory = (video) => {
+    const browserHistory = JSON.parse(localStorage.getItem("history"));
+    if (browserHistory) {
+      localStorage.setItem(
+        "history",
+        JSON.stringify([...browserHistory, video])
+      );
+    } else {
+      localStorage.setItem("history", JSON.stringify([video]));
+    }
+  };
+
   return (
     <>
       <div id="sort-buttons">
@@ -61,6 +73,9 @@ const Home = () => {
                   className="thumbnail"
                   src={`https://img.youtube.com/vi/${video.ytVideoID}/maxresdefault.jpg`}
                   alt=""
+                  onClick={() => {
+                    addToBrowserHistory(video);
+                  }}
                 ></img>
               </Link>
               <div className="video-description">

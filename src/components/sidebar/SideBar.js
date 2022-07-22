@@ -1,11 +1,11 @@
 import "./SideBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import home from "../../assets/svg/home.svg";
 import playlist from "../../assets/svg/playlist.svg";
 import liked from "../../assets/svg/liked.svg";
 import watchLater from "../../assets/svg/watch-later.svg";
 import history from "../../assets/svg/history.svg";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideBar = ({ sideDrawer, setSideDrawer }) => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -13,6 +13,27 @@ const SideBar = ({ sideDrawer, setSideDrawer }) => {
   const tabChangeHandler = (index) => {
     setTabIndex(index);
   };
+
+  const currLoc = useLocation();
+  useEffect(() => {
+    switch (currLoc.pathname) {
+      case "/playlists":
+        setTabIndex(2);
+        return;
+      case "/liked":
+        setTabIndex(3);
+        return;
+      case "/watchlater":
+        setTabIndex(4);
+        return;
+      case "/history":
+        setTabIndex(5);
+        return;
+      default:
+        setTabIndex(1);
+        return;
+    }
+  }, [currLoc]);
 
   return (
     <div
@@ -63,7 +84,7 @@ const SideBar = ({ sideDrawer, setSideDrawer }) => {
         Watch Later
       </Link>
 
-      {/* <Link
+      <Link
         to={"/history"}
         className={tabIndex === 5 ? "tab active-tab" : "tab"}
         onClick={() => {
@@ -72,7 +93,7 @@ const SideBar = ({ sideDrawer, setSideDrawer }) => {
       >
         <img src={history} alt="history-icon" />
         History
-      </Link> */}
+      </Link>
     </div>
   );
 };

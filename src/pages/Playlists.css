@@ -45,9 +45,10 @@
 }
 
 .single-video {
+  height: 5.2rem;
   display: flex;
-  /* margin-top: 1rem; */
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  margin: 0.5rem 0 0.8rem 0;
   width: 90%;
   /* border: 1px solid red; */
   border-radius: 6px;
@@ -62,5 +63,5 @@
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-around;
 }

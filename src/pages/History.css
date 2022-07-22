@@ -1,0 +1,24 @@
+.clear-history-button {
+  cursor: pointer;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2.5rem;
+  width: 9rem;
+  border-radius: 6px;
+  background-color: rgba(255, 37, 37, 0.757);
+  color: black;
+}
+
+#redirect-button {
+  cursor: pointer;
+  font-weight: 700;
+  background-color: var(--highlight-color);
+  display: flex;
+  height: 2.5rem;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

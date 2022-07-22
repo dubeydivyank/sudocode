@@ -9,7 +9,9 @@ const Liked = () => {
 
   return (
     <>
-      {!user && <div>Login to see liked videos. </div>}
+      {!user && (
+        <h2 className="login-to-continue">Login to see liked videos. </h2>
+      )}
       {liked ? (
         <div className="cards-container">
           {Object.values(liked).map((video) => {

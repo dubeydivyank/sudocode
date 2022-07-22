@@ -10,7 +10,7 @@ const Playlists = () => {
   };
 
   return (
-    <div className="playlist-container" style={{ display: "flex" }}>
+    <div className="playlist-container">
       <div className="playlist-names">
         <div
           // className="list-name"

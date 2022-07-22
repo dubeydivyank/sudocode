@@ -28,14 +28,18 @@ const VideoList = ({ playlist }) => {
           <div className="single-video">
             <Link to={`/video/${vid.ytVideoID}`}>
               <img
-                style={{ height: "5rem" }}
+                style={{ height: "5.2rem" }}
                 src={`https://img.youtube.com/vi/${vid.ytVideoID}/maxresdefault.jpg`}
                 alt=""
               />
             </Link>
             <div className="video-text">
               <div>{vid.title}</div>
-              <div>{vid["date-added"]}</div>
+              <div
+                style={{ fontSize: "0.8rem", color: "var(--font-color-date)" }}
+              >
+                {vid["date-added"]}
+              </div>
             </div>
           </div>
         );
