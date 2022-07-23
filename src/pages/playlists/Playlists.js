@@ -13,7 +13,6 @@ const Playlists = () => {
     <div className="playlist-container">
       <div className="playlist-names">
         <div
-          // className="list-name"
           className={
             playlist === "System Design Primer Course"
               ? "list-name selected-playlist"
@@ -25,8 +24,8 @@ const Playlists = () => {
         >
           System Design Primer Course
         </div>
+
         <div
-          // className="list-name"
           className={
             playlist === "Low Level Design"
               ? "list-name selected-playlist"
@@ -38,8 +37,8 @@ const Playlists = () => {
         >
           Low Level Design
         </div>
+
         <div
-          // className="list-name"
           className={
             playlist === "Design Patterns"
               ? "list-name selected-playlist"
@@ -51,8 +50,8 @@ const Playlists = () => {
         >
           Design Patterns
         </div>
+
         <div
-          // className="list-name"
           className={
             playlist === 4 ? "list-name selected-playlist" : "list-name"
           }
@@ -62,8 +61,8 @@ const Playlists = () => {
         >
           Resume Building
         </div>
+
         <div
-          // className="list-name"
           className={
             playlist === "Mock Interviews"
               ? "list-name selected-playlist"
@@ -75,8 +74,8 @@ const Playlists = () => {
         >
           Mock Interviews
         </div>
+
         <div
-          // className="list-name"
           className={
             playlist === "Misc" ? "list-name selected-playlist" : "list-name"
           }

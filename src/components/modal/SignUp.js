@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import close from "../../assets/svg/close.svg";
-import googlelogo from "../../assets/svg/google-logo.png";
 import { useAuthContext } from "../../context/AuthContext";
+import googlelogo from "../../assets/svg/google-logo.png";
+import close from "../../assets/svg/close.svg";
 
 const SignUp = ({ setLoginPage, setModalOpen, googleSignInHandler }) => {
   const [email, setEmail] = useState("");

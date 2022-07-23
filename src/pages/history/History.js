@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import trashIcon from "../../assets/svg/trash.svg";
 import { useNavigate } from "react-router-dom";
 import "./History.css";
+import trashIcon from "../../assets/svg/trash.svg";
 
 const History = () => {
   const [history, setHistory] = useState();

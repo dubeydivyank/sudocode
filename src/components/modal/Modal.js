@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useAuthContext } from "../../context/AuthContext";
 import "./Modal.css";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import { useAuthContext } from "../../context/AuthContext";
 
 import close from "../../assets/svg/close.svg";
 

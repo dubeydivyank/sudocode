@@ -1,14 +1,14 @@
-import "./Header.css";
 import { useState, useEffect } from "react";
-import login from "../../assets/svg/login.svg";
-import userIcon from "../../assets/svg/user.svg";
-import Modal from "../modal/Modal";
-import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
+import ReactDOM from "react-dom";
+import "./Header.css";
+import Modal from "../modal/Modal";
 import { useAuthContext } from "../../context/AuthContext";
 import { useDbContext } from "../../context/DbContext";
 import searchLogo from "../../assets/svg/search.svg";
 import menu from "../../assets/svg/menu.svg";
+import userIcon from "../../assets/svg/user.svg";
+import login from "../../assets/svg/login.svg";
 
 const Backdrop = () => {
   return <div className="backdrop" />;
@@ -21,9 +21,11 @@ const Header = ({ sideDrawer, setSideDrawer }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const filter = (input) => {
-    const arrayToFilter = videos;
+    const arrayToFilter = [...videos];
     const filteredArray = arrayToFilter.filter((video) => {
-      return video.title.toLocaleLowerCase().includes(input);
+      return video.title
+        .toLocaleLowerCase()
+        .includes(input.toLocaleLowerCase());
     });
     return filteredArray;
   };

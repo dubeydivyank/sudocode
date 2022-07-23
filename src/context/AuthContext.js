@@ -33,17 +33,12 @@ export function AuthContextProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-      // console.log("Auth", currentuser);
       setUser(currentuser);
     });
 
     return () => {
       unsubscribe();
     };
-    // onAuthStateChanged(auth, (currentuser) => {
-    //   // console.log("Auth", currentuser);
-    //   setUser(currentuser);
-    // });
   }, []);
 
   return (
@@ -54,7 +49,6 @@ export function AuthContextProvider({ children }) {
 }
 
 export function useAuthContext() {
-  // useContext(authContext);
   const userAuthContext = useContext(authContext);
   if (!userAuthContext) {
     throw new Error("useAuthContext must be used within AuthContextProvider");

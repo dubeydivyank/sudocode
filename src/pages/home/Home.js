@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Home.css";
 import { Link } from "react-router-dom";
 import { useDbContext } from "../../context/DbContext";
+import "./Home.css";
 import sortup from "../../assets/svg/sortup.svg";
 import sortdown from "../../assets/svg/sortdown.svg";
 

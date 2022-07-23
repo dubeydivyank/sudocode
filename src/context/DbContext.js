@@ -8,7 +8,6 @@ const dbContext = createContext();
 
 const DbContextProvider = ({ children }) => {
   const { user } = useAuthContext();
-
   const [videos, setVideos] = useState([]);
   const [videoList, setVideoList] = useState([]);
   const [liked, setLiked] = useState({});

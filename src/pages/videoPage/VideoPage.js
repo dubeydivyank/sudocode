@@ -1,12 +1,12 @@
 import React from "react";
-import ReactPlayer from "react-player/youtube";
-import data from "../../data.json";
-import "./VideoPage.css";
+import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import ReactPlayer from "react-player/youtube";
+import "./VideoPage.css";
+import data from "../../data.json";
 import { useAuthContext } from "../../context/AuthContext";
 import { useDbContext } from "../../context/DbContext";
-import ReactDOM from "react-dom";
 import AlertModal from "../../components/modal/AlertModal";
 import likedIcon from "../../assets/svg/liked.svg";
 import watchLaterIcon from "../../assets/svg/watch-later.svg";
@@ -30,17 +30,10 @@ const VideoPage = () => {
   const [alert, setAlert] = useState("");
 
   //get video using video id in URL
-
   const { videoId } = useParams();
   const video = data.videos.filter((vid) => {
     return vid.ytVideoID === videoId;
   });
-
-  // const video = videoList.forEach((vid) => {
-  //   if (vid.ytVideoID === videoId) {
-  //     return [vid];
-  //   }
-  // });
 
   //Check if current video is in user's liked list
   useEffect(() => {
